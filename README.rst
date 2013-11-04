@@ -85,3 +85,4 @@ Finally, please sprinkle some Salt around your systems and let the
 deliciousness come forth.
 
 .. _`Apache 2.0 license`: http://www.apache.org/licenses/LICENSE-2.0.html
+trigger a travis build
