@@ -457,6 +457,11 @@ def valid_id(opts, id_):
     Returns if the passed id is valid
     '''
     try:
+        # Make sure id isn't such that interpreted as a filepath it might
+        # cause problem..
+        if '/' in id_ or '\\' in id_ or id_[0] == '~':
+            return False
+
         return bool(clean_path(opts['pki_dir'], id_))
     except (AttributeError, KeyError) as e:
         return False
